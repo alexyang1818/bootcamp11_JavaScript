@@ -7,7 +7,7 @@ const tableData = data;
 // or a collection of visual data (such as graphs and maps), for presentation.
 
 // Reference the HTML table (tagged as 'tbody') using d3 
-var tbody = d3.select('tbody')
+var tbody = d3.select('tbody');
 
 function buildTable(data) {
     tbody.html(''); // clear the existing table
