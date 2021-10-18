@@ -23,3 +23,16 @@ function buildTable(data) {
         });
     });
 }
+
+function handleClick() {
+    let date = d3.select('#datetime').property('value'); // select the first element matching selector string '#datetime'
+    let filteredData = tableData;
+    if (date) {
+        filteredData = filteredData.filter(row => row.datetime === date); // '===': strict match; '==' loose match.
+    }
+    buildTable(filteredData);
+}
+
+d3.select_all('#filter-btn').on('click', handleClick);
+
+buildTable(tableData); // to load the un-filtered table when page is loaded for the first time
