@@ -7,19 +7,19 @@ const tableData = data;
 // or a collection of visual data (such as graphs and maps), for presentation.
 
 // Reference the HTML table (tagged as 'tbody') using d3 
-var tbody = d3.select('tbody');
+var tbody = d3.select("tbody");
 
 function buildTable(data) {
-    tbody.html(''); // clear the existing table
+    tbody.html(""); // clear the existing table
 
     //loop through each object in the data
     data.forEach((dataRow) => {  //forEach only works for Arrays
-    let row = tbody.append('tr'); // add a table row to 'tbody'
+        let row = tbody.append("tr"); // add a table row to 'tbody'
 
-    // loop through each field in the dataRow and add each value as a table cell (td)
-    Object.values(dataRow).forEach((val) => { // 'Object.values' tells js to reference one object from the array of UFO sightings.
-        let cell = row.append('td'); // add a table cell to table row
-        cell.text(val); // add the value to table cell
+        // loop through each field in the dataRow and add each value as a table cell (td)
+        Object.values(dataRow).forEach((val) => { // 'Object.values' tells js to reference one object from the array of UFO sightings.
+            let cell = row.append("td"); // add a table cell to table row
+            cell.text(val); // add the value to table cell
         });
     });
 }
@@ -33,6 +33,6 @@ function handleClick() {
     buildTable(filteredData);
 }
 
-d3.select_all('#filter-btn').on('click', handleClick);
+d3.select('#filter-btn').on('click', handleClick);
 
 buildTable(tableData); // to load the un-filtered table when page is loaded for the first time

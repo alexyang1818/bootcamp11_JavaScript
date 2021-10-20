@@ -12,14 +12,19 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="static/css/style.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/icon/favicon-16x16.png">
+    <link rel="manifest" href="static/icon/site.webmanifest">
 </head>
-<body>
+<body class='bg-dark'>
     <div class='wrapper'>
-        <nav class='navbar navbar-expand-lg'>
+        <nav class='navbar navbar-dark bg-dark navbar-expand-lg'>
             <a class='navbar-brand' href='index.html'>UFO Sightings</a>
         </nav>
         <div class='jumbotron'>
-            <h1>The Truth Is Out There</h1>
+            <h1 class='display-4'>The Truth Is Out There</h1>
         </div>
 
         <div class='container-fluid'>
@@ -42,17 +47,17 @@
 
             <div class='row'>
                 <div class='col-md-3'>
-                    <form>
+                    <form class='bg-dark'>
                         <p>Filter Search</p>
-                        <ul class='list-group'>
-                            <li class='list-group-item'>
+                        <ul class='list-group bg-dark'>
+                            <li class='list-group-item bg-dark'>
                                 <label for='date'>Enter Date</label>
                             </li>
-                            <li class='list-group-item'>
+                            <li class='list-group-item bg-dark'>
                                 <input type='text' placeholder='1/10/2010' id='datetime'/>
                             </li>
-                            <li class='list-group-item'>
-                                <button id='filter-btn' type='button' class='btn btn-default'>Filter Table</button>
+                            <li class='list-group-item bg-dark'>
+                                <button id='filter-btn' type='button' class='btn btn-default btn-dark'>Filter Table</button>
                             </li>
                         </ul>
                     </form>
@@ -76,10 +81,10 @@
             </div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js" charset='utf-8'></script> <!-- allow the library to listen to our code -->
-    <!-- <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script> -->
-    <!-- <script src="https://d3js.org/d3.v7.min.js"></script> -->
     <script src="static/js/data.js"></script> <!--make sure data.js is loaded first-->
     <script src="static/js/app.js"></script>
+    
 </body>
 </html>
